@@ -229,8 +229,9 @@ export function AttractionImagesPage() {
                     <img
                         src={row.original.image_url}
                         alt={row.original.caption || 'Image'}
+                        referrerPolicy="no-referrer"
                         className="h-12 w-12 object-cover rounded-lg border border-white/10 group-hover:scale-110 transition-transform cursor-pointer"
-                        onClick={() => window.open(row.original.image_url, '_blank')}
+                        onClick={() => window.open(row.original.image_url, '_blank', 'noreferrer')}
                     />
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
                         <ExternalLink className="h-4 w-4 text-white drop-shadow-md" />
@@ -371,7 +372,7 @@ export function AttractionImagesPage() {
                             required
                         />
                         {formData.image_url && (
-                            <img src={formData.image_url} alt="Preview" className="h-32 object-contain mt-2 border rounded p-1" />
+                            <img src={formData.image_url} alt="Preview" referrerPolicy="no-referrer" className="h-32 object-contain mt-2 border rounded p-1" />
                         )}
                     </div>
 
