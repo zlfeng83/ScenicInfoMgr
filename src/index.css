@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+@theme {
+  --color-primary-50: #ecfeff;
+  --color-primary-100: #cffafe;
+  --color-primary-200: #a5f3fc;
+  --color-primary-300: #67e8f9;
+  --color-primary-400: #22d3ee;
+  --color-primary-500: #06b6d4;
+  /* Default Cyan */
+  --color-primary-600: #0891b2;
+  --color-primary-700: #0e7490;
+  --color-primary-800: #155e75;
+  --color-primary-900: #164e63;
+  --color-primary-950: #083344;
+
+  --font-sans: 'Outfit', system-ui, sans-serif;
+}
+
+@layer base {
+  :root {
+    /* Brighter, more vibrant teal/cyan background for holographic effect */
+    --background: 195 60% 12%;
+    --foreground: 210 40% 98%;
+    /* White text */
+    --muted: 217 32% 17%;
+    --muted-foreground: 215 20% 65%;
+    --border: 0 0% 100%;
+    /* Pure white border base (will be used with alpha) */
+    --input: 0 0% 100%;
+    --primary: 188 95% 43%;
+    /* hsl(188, 95%, 43%) = #06b6d4 Cyan */
+    --primary-foreground: 0 0% 100%;
+  }
+
+  /* We override dark to be the exact same, effectively forcing one theme */
+  .dark {
+    --background: 195 60% 12%;
+    --foreground: 210 40% 98%;
+    --muted: 217 32% 17%;
+    --muted-foreground: 215 20% 65%;
+    --border: 0 0% 100%;
+    --input: 0 0% 100%;
+    --primary: 188 95% 43%;
+    --primary-foreground: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border) / 0.1);
+    /* Default very faint white glass border */
+  }
+
+  body {
+    background: linear-gradient(to bottom, rgba(16, 42, 67, 0.5), rgba(4, 15, 30, 0.8)), url('/scenic_bg.png') no-repeat center center fixed;
+    background-size: cover;
+    color: hsl(var(--foreground));
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+}
