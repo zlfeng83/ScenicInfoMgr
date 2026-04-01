@@ -119,10 +119,10 @@ export function AttractionImagesPage() {
                 });
             }
 
-            handleCloseModal();
             return { previousImages, currentScenicId };
         },
         onSuccess: () => {
+            handleCloseModal();
             toast.success(editingImage ? '图片更新成功！' : '图片上传成功！');
         },
         onError: (err, _newImage, context) => {

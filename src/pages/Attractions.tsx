@@ -119,10 +119,10 @@ export function AttractionsPage() {
                 });
             }
 
-            handleCloseModal();
             return { previousAttractions, currentScenicId };
         },
         onSuccess: () => {
+            handleCloseModal();
             toast.success(editingAttraction ? '景点更新成功！' : '景点创建成功！');
         },
         onError: (err, _newAttraction, context) => {

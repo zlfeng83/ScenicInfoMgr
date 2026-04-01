@@ -128,10 +128,10 @@ export function EventsPage() {
                 });
             }
 
-            handleCloseModal();
             return { previousEvents, currentScenicId };
         },
         onSuccess: () => {
+            handleCloseModal();
             toast.success(editingEvent ? '活动更新成功！' : '活动创建成功！');
         },
         onError: (err, _newEvent, context) => {

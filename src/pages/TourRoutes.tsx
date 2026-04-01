@@ -101,10 +101,10 @@ export function TourRoutesPage() {
                 });
             }
 
-            handleCloseModal();
             return { previousRoutes, currentScenicId };
         },
         onSuccess: () => {
+            handleCloseModal();
             toast.success(editingRoute ? '路线更新成功！' : '路线创建成功！');
         },
         onError: (err, _newRoute, context) => {

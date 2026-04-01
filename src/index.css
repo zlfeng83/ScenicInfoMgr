@@ -15,6 +15,9 @@
   --color-primary-800: #155e75;
   --color-primary-900: #164e63;
   --color-primary-950: #083344;
+  
+  --color-primary: var(--color-primary-500);
+  --color-primary-foreground: #ffffff;
 
   --font-sans: 'Outfit', system-ui, sans-serif;
 }

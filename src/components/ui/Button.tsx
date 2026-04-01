@@ -8,7 +8,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 
 const buttonVariants = {
     variant: {
-        default: "bg-primary text-primary-950 shadow-[0_0_15px_rgba(6,182,212,0.4)] hover:shadow-[0_0_25px_rgba(6,182,212,0.6)] hover:bg-primary/90 active:scale-[0.98] transition-all duration-300",
+        default: "bg-primary text-white shadow-[0_0_15px_rgba(6,182,212,0.4)] hover:shadow-[0_0_25px_rgba(6,182,212,0.6)] hover:bg-primary/90 active:scale-[0.98] transition-all duration-300",
         destructive: "bg-red-500/80 text-white shadow-[0_0_15px_rgba(239,68,68,0.4)] hover:shadow-[0_0_25px_rgba(239,68,68,0.6)] hover:bg-red-500 active:scale-[0.98] transition-all duration-300",
         outline: "border border-white/20 bg-white/5 hover:bg-white/10 text-white hover:text-white active:scale-[0.98] transition-all duration-300",
         secondary: "bg-white/10 text-white shadow-sm border border-white/5 hover:bg-white/20 active:scale-[0.98] transition-all duration-300",
